@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-     <title> meu primeiro web site </title>  <!---meu primeiro web site--->
-<script src="index.js"> </script>
+    <title>Meu primeiro web site</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
+<body>
+<script>
+    var nome = prompt('Digite seu nome antes de entrar no site');
+    if (nome) {
+        var idade = prompt('Digite sua idade antes de entrar no site');
+        if (idade && parseInt(idade) >= 18) {
+            alert('Bem vindo, ' + nome);
+        } else {
+            alert('Desculpe, você não tem permissão para acessar o site.');
+            window.location.href = 'https://www.google.com'; // Redirecionar para o Google ou outra página
+        }
+    } else {
+        alert('Nome não fornecido. O acesso ao site foi bloqueado.');
+        window.location.href = 'https://www.google.com'; // Redirecionar para o Google ou outra página
+    }
+</script>
+<h1>Eu gosto de gatos!</h1>
+<!-- Resto do seu HTML -->
+</body>
+</html>
 
-<body> 
-
-     <h1>eu gosto de gatos!</h1> <!---"h1, h2, h3" diminuem a fonte de texto--->
      <h2>Meu gato favorito é:</h2>
      <ul>
         <li>Ciames!</li> <!---Monta em classificassoes/lista--->
